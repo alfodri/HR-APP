@@ -57,6 +57,8 @@ Installed apps check:
 
 Staff data in app data is kept when updating.
 
+See [docs/RELEASE_AND_UPDATES.md](docs/RELEASE_AND_UPDATES.md) for building the Windows `.exe` on GitHub Actions and testing updates.
+
 ## Tests
 
 ```bash

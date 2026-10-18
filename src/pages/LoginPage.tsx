@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DEV_BROWSER_HINT, isTauri } from "../tauriEnv";
 import type { UserInfo } from "../types";
 
 interface Props {
@@ -31,7 +30,6 @@ export function LoginPage({ onLogin, doLogin }: Props) {
     <div className="auth-card">
       <h1>تسجيل الدخول</h1>
       <p className="muted">نظام الموارد البشرية</p>
-      {!isTauri() && <p className="muted">{DEV_BROWSER_HINT}</p>}
       <form onSubmit={submit}>
         <label>
           اسم المستخدم
