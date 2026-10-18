@@ -38,6 +38,32 @@ Updater endpoint (in app):
 
 **Note:** `releases/latest` always points at the newest GitHub Release, so keep only one “current” release or use version tags consistently.
 
+## Error: “Could not fetch a valid release JSON from the remote”
+
+The app is requesting `latest.json` from the **latest GitHub Release**. You see this when:
+
+- There is **no published release** yet (only a git tag), or
+- The release exists but **`latest.json` was not uploaded**, or
+- The URL returns **404** (check in a browser).
+
+**Quick fix (Linux, manual upload):**
+
+```bash
+./scripts/prepare-release-assets.sh
+```
+
+Then open [Create release v0.1.1](https://github.com/alfodri/HR-APP/releases/new?tag=v0.1.1), publish the release, and attach **all** of:
+
+- `release-assets/latest.json` (required; name must be exactly `latest.json`)
+- `release-assets/HR App_*_amd64.AppImage`
+- `release-assets/HR App_*_amd64.AppImage.sig`
+
+Verify: open  
+`https://github.com/alfodri/HR-APP/releases/latest/download/latest.json`  
+—you should see JSON with `"version": "0.1.1"`, not a 404 page.
+
+If **Actions** builds fail, add the `TAURI_SIGNING_PRIVATE_KEY` secret first, then re-run the Release workflow or use the script above.
+
 ## Local Linux build (no Windows exe)
 
 ```bash

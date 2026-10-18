@@ -33,3 +33,4 @@ npm-debug.log*
 
 # Local build copies for sharing (not for git)
 share/
+release-assets/
