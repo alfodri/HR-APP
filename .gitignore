@@ -1,0 +1,32 @@
+# Dependencies & build output
+node_modules/
+dist/
+dist-ssr/
+
+# Rust / Tauri
+src-tauri/target/
+
+# Local dev database (browser dev mode)
+dev-data/
+
+# Updater signing (never publish private key)
+src-tauri/.tauri/
+
+# Local HR data — real staff PII; keep your own copy outside the repo
+staff-new.xlsx
+*.xlsx
+
+# Logs & env
+logs/
+*.log
+npm-debug.log*
+.env
+.env.*
+
+# OS & editors
+.DS_Store
+.idea/
+*.local
+
+# Optional: internal Cursor plans (project memory in .cursor/memory is committed)
+.cursor/plans/

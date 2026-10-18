@@ -1,0 +1,16 @@
+---
+description: Read and maintain project memory for HR App
+alwaysApply: true
+---
+
+# Project memory
+
+Before changing code in this repo, read [.cursor/memory/PROJECT.md](.cursor/memory/PROJECT.md).
+
+When this chat changes architecture, npm scripts, how to run the app, the data model, auth, import, updates, or an explicit product decision, **rewrite** `.cursor/memory/PROJECT.md` before your final reply so it matches the repo.
+
+- Update by replacing stale sections, not by appending a chat log each time.
+- Hard cap: **500 lines** for the whole file. Shorten older detail if needed.
+- Never store passwords, API tokens, or updater private key contents. File paths only (e.g. signing key path).
+
+If the user only asks a question or you made a tiny fix that does not affect the above, you may skip updating the memory.
