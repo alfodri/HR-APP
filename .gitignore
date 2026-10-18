@@ -30,3 +30,6 @@ npm-debug.log*
 
 # Optional: internal Cursor plans (project memory in .cursor/memory is committed)
 .cursor/plans/
+
+# Local build copies for sharing (not for git)
+share/
