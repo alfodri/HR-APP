@@ -88,7 +88,9 @@ jobs:
             src-tauri/target/release/bundle/nsis/*.sig
 
   publish:
+    # Publish when Linux succeeds; Windows is optional (staff may only need AppImage).
     needs: [build-linux, build-windows]
+    if: needs.build-linux.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

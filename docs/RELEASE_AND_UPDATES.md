@@ -11,14 +11,19 @@ The updater needs the **same** private key you use locally.
 
 ## Build Windows `.exe` + Linux AppImage (CI)
 
-Windows installers **cannot** be built on Ubuntu. Use GitHub Actions:
+**Important:** `git push origin v0.1.x` only pushes a **tag**. The updater needs a **GitHub Release** with `latest.json` attached. Until CI finishes or you upload files manually, the app will show *Could not fetch a valid release JSON*.
+
+1. Add secret **`TAURI_SIGNING_PRIVATE_KEY`** (see above). Without it, the Release workflow **fails** and nothing is published.
+2. Tag and push (version in `package.json` / `tauri.conf.json` must match the tag):
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 
-Or: **Actions → Release → Run workflow**.
+Or: **Actions → Release → Run workflow** (after fixing a failed run: **Re-run all jobs**).
+
+If a tag failed, fix the secret then **Re-run** that workflow run—do not only push another tag unless you also intend to release that version.
 
 Download from the [Releases](https://github.com/alfodri/HR-APP/releases) page:
 
