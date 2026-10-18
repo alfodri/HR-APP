@@ -11,7 +11,7 @@ Arabic RTL desktop **HR staff** app: **Tauri 2** (Rust) + **React** + **TypeScri
 - Reference spreadsheet: `staff-new.xlsx` (228 rows, Arabic headers). App starts **empty** until import or manual add.
 - UI language: Arabic, RTL. Rust command names stay English.
 
-GitHub: **alfodri/HR-APP** (public).
+GitHub: **alfodri/HR-APP** (public). Remote: `git@github.com:alfodri/HR-APP.git`. Not in git: `staff-new.xlsx` / `*.xlsx`, `dev-data/`, `src-tauri/target/`, `node_modules/`, `src-tauri/.tauri/` (signing keys), `.cursor/plans/`.
 
 ## How to run
 
