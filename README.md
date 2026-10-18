@@ -7,9 +7,11 @@ Repository: [alfodri/HR-APP](https://github.com/alfodri/HR-APP)
 ## Features
 
 - **HR-only** accounts: first launch creates an HR user; any signed-in HR user can add more HR accounts
-- Staff list, search, add/edit, Excel import (same columns as `staff-new.xlsx`)
+- Staff list, search, add/edit, Excel import (Arabic column headers; see app import screen)
 - In-app updates from **GitHub Releases** (Windows NSIS, Linux AppImage)
 - Placeholder for future letter / PDF requests
+
+**Privacy:** Staff Excel files with real employee data are **not** in this public repo. Keep them on your machine only.
 
 ## Development (frontend in browser)
 
@@ -60,3 +62,5 @@ Staff data in app data is kept when updating.
 ```bash
 cd src-tauri && cargo test
 ```
+
+The import test expects `staff-new.xlsx` in the project root for local runs only (file is gitignored).
